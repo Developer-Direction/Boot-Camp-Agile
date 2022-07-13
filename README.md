@@ -8,15 +8,17 @@ To learn & comprehend **Agile Software Development Methodology** via the simulat
 
 For your trophy case you will be able to add: **A fork of this repository** (if completed in total) to showcase your studies in Agile alongside with **a completed web application repository of your own creation**. 
 
+# Sprint Planning:
+
 ### User Stories:
 
-# Phase 1:
+# Sprint 1:
 
-# Phase 2: 
+# Sprint 2: 
 
-# Phase 3:
+# Sprint 3:
 
-# Phase 4:
+# Retro:
 
 ### Resources:
 
