@@ -24,4 +24,6 @@ For your trophy case you will be able to add: **A fork of this repository** (if 
 
 Trello board link: https://trello.com/invite/bootcampagile/01751e372503d7d21216eae7c60a10a6
 
+Kraken REST API Documentation: https://docs.kraken.com/rest/
+
 ### Glossary:
