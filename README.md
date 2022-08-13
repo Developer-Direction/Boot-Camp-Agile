@@ -12,6 +12,8 @@ For your trophy case you will be able to add: **A fork of this repository** (if 
 
 ## Sprint 1 Planning:
 
+<img width="1957" alt="image" src="https://user-images.githubusercontent.com/109127536/184504424-5bb84435-f876-4e0d-ab63-fc77fb2d11bc.png">
+
 # Sprint 1:
 
 # Sprint 2: 
