@@ -6,15 +6,18 @@ import hashlib
 import hmac
 import base64
 
-#variables
-api_key = 'YOUR_API_KEY'
-api_secret = 'YOUR_API_SECRET'
-
 #print string to comand line welcome to your Python Trading Bot
 print("Welcome to your Python Trading Bot")
+
+#Prompt user to input API Key and API Secret upon initializing
+#the bot and storing them in variables.
+api_key = input("Please enter your API Key: ")
+api_secret = input("Please enter your API Secret: ")
+
 #run loop for bot
 run = True
 while run:
+    
     #print on a new line chose what action you want to take
     #list of actions our users will take feel free to change names
     #make sure checks for valid input are in lower case
@@ -24,6 +27,7 @@ while run:
     print("Get Open Orders\n")
     print("Cancel Order\n")
     print("Fund Account\n")
+    print("Change Account\n")
     print("Exit\n")
     
     #get user input for action
@@ -39,6 +43,12 @@ while run:
         print("Account Balance is:")
         #sleep for 1 second to allow user to read output
         time.sleep(1)
+        
+    #if user input is change account, they'll be able to input a new
+    #API Key and API Secret.
+    if action == "change account":
+        api_key = input("Please enter your API Key: ")
+        api_secret = input("Please enter your API Secret: ")
     
     #if user action is exit then exit loop
     if action == "exit":
@@ -46,7 +56,7 @@ while run:
         #if user action is not listed then print error message
     
     #consider rewriting to check from a listy instead of if else and a ton of conditionals
-    elif action != "get account balance" and action != "get account history" and action != "get open orders" and action != "cancel order" and action != "fund account":
+    elif action != "get account balance" and action != "get account history" and action != "get open orders" and action != "cancel order" and action != "fund account" and action != "change account":
         print("Error: Action not found")
     
     
