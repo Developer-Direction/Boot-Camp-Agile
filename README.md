@@ -28,4 +28,11 @@ Trello board link: https://trello.com/invite/bootcampagile/01751e372503d7d21216e
 
 Kraken REST API Documentation: https://docs.kraken.com/rest/
 
+Kraken API Testing Environment: https://support.kraken.com/hc/en-us/articles/360024809011-API-Testing-Environment
+
 ### Glossary:
+
+Agile -
+SCRUM -
+Sprints - 
+User Stories - 
