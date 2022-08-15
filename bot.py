@@ -20,6 +20,7 @@ while run:
     #make sure checks for valid input are in lower case
     print("Choose what action you want to take\n")
     print("Get Account Balance\n")
+    print("Add Order\n")
     print("Get Account History\n")
     print("Get Open Orders\n")
     print("Cancel Order\n")
@@ -39,6 +40,9 @@ while run:
         print("Account Balance is:")
         #sleep for 1 second to allow user to read output
         time.sleep(1)
+
+    if action == "add order":
+        add_order()
     
     #if user action is exit then exit loop
     if action == "exit":
