@@ -54,6 +54,11 @@ while run:
         api_secret = input("Please enter your API Secret: ")
 
     
+    #if user input is add order, they'll be able to add an order
+    if action == "add order":
+       
+
+    
     #if user action is exit then exit loop
     if action == "exit":
         run = False
