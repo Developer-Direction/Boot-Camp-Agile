@@ -10,6 +10,8 @@ For your trophy case you will be able to add: **A fork of this repository** (if 
 
 ### User Stories:
 
+<blockquote class="trello-card"><a href="https:&#x2F;&#x2F;trello.com&#x2F;c&#x2F;iNetA3ok&#x2F;1-build-kraken-trading-application">Build Kraken Trading Application.</a></blockquote><script src="https://p.trellocdn.com/embed.min.js"></script>
+
 ## Sprint 1 Planning:
 
 <img width="1957" alt="image" src="https://user-images.githubusercontent.com/109127536/184504424-5bb84435-f876-4e0d-ab63-fc77fb2d11bc.png">
