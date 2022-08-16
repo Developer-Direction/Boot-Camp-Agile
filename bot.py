@@ -5,6 +5,7 @@ import urllib.parse
 import hashlib
 import hmac
 import base64
+import order 
 
 #print string to comand line welcome to your Python Trading Bot
 print("Welcome to your Python Trading Bot")
@@ -44,7 +45,7 @@ while run:
         print("Account Balance is:")
         #sleep for 1 second to allow user to read output
         time.sleep(1)
-<<<<<<< HEAD
+# <<<<<<< HEAD
 
         
     #if user input is change account, they'll be able to input a new
@@ -56,9 +57,9 @@ while run:
     
     #if user input is add order, they'll be able to add an order
     if action == "add order":
-       
+        order.add_order()
 
-    
+
     #if user action is exit then exit loop
     if action == "exit":
         run = False
