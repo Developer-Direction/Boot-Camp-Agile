@@ -5,6 +5,7 @@ import urllib.parse
 import hashlib
 import hmac
 import base64
+import Kraken_Request as kr
 
 #print string to comand line welcome to your Python Trading Bot
 print("Welcome to your Python Trading Bot")
