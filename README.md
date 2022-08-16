@@ -8,15 +8,39 @@ To learn & comprehend **Agile Software Development Methodology** via the simulat
 
 For your trophy case you will be able to add: **A fork of this repository** (if completed in total) to showcase your studies in Agile alongside with **a completed web application repository of your own creation**. 
 
+
+## Sprint 1 Planning:
+
+<img width="1957" alt="image" src="https://user-images.githubusercontent.com/109127536/184504424-5bb84435-f876-4e0d-ab63-fc77fb2d11bc.png">
+
 ### User Stories:
 
 TODO: add user story blockquotes - josh
 
 <blockquote class="trello-card"><a href="https:&#x2F;&#x2F;trello.com&#x2F;c&#x2F;iNetA3ok&#x2F;1-build-kraken-trading-application">Build Kraken Trading Application.</a></blockquote>
 
-## Sprint 1 Planning:
+<blockquote class="trello-card"><a href="https:&#x2F;&#x2F;trello.com&#x2F;c&#x2F;k7N6jEA4&#x2F;4-build-python-cli-shell">Build Python CLI shell</a></blockquote>
 
-<img width="1957" alt="image" src="https://user-images.githubusercontent.com/109127536/184504424-5bb84435-f876-4e0d-ab63-fc77fb2d11bc.png">
+<blockquote class="trello-card"><a href="https:&#x2F;&#x2F;trello.com&#x2F;c&#x2F;MbvlNmAj&#x2F;28-getkrakensignature-function">get_kraken_signature() function</a></blockquote>
+
+<blockquote class="trello-card"><a href="https:&#x2F;&#x2F;trello.com&#x2F;c&#x2F;IK6l3O5w&#x2F;29-krakenrequest-function">kraken_request() function</a></blockquote>
+
+<blockquote class="trello-card"><a href="https:&#x2F;&#x2F;trello.com&#x2F;c&#x2F;IOTVO6vZ&#x2F;22-add-upload-api-key-and-api-sec-to-menu">Add &#39;upload API KEy and API Sec&#39; to menu</a></blockquote>
+
+<blockquote class="trello-card"><a href="https:&#x2F;&#x2F;trello.com&#x2F;c&#x2F;pGbXASs2&#x2F;21-prompt-user-for-api-key-and-api-secret-and-store-in-variables">Prompt user for API Key and API Secret and store in variable(s)</a></blockquote>
+
+<blockquote class="trello-card"><a href="https:&#x2F;&#x2F;trello.com&#x2F;c&#x2F;X3PjiRxf&#x2F;24-display-open-order-to-menu-list">Display &#39;Open Order&#39; to menu list</a></blockquote>
+
+<blockquote class="trello-card"><a href="https:&#x2F;&#x2F;trello.com&#x2F;c&#x2F;jiIbTW2z&#x2F;32-import-krakenrequestpy-to-main-botpy-file">Import Kraken_Request.py to main bot.py file</a></blockquote>
+
+<blockquote class="trello-card"><a href="https:&#x2F;&#x2F;trello.com&#x2F;c&#x2F;HnddtdLv&#x2F;16-display-system-status-when-app-is-ran">Display System Status when app is ran</a></blockquote>
+
+<blockquote class="trello-card"><a href="https:&#x2F;&#x2F;trello.com&#x2F;c&#x2F;dQOFxLp7&#x2F;7-implement-user-add-order-functionality">Implement user Add Order functionality</a></blockquote>
+
+<blockquote class="trello-card"><a href="https:&#x2F;&#x2F;trello.com&#x2F;c&#x2F;dQOFxLp7&#x2F;7-implement-user-add-order-functionality">Implement user Add Order functionality</a>
+
+
+
 
 # Sprint 1:
 
