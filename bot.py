@@ -6,6 +6,7 @@ import hashlib
 import hmac
 import base64
 import order 
+import accountfunctions
 from tqdm.auto import tqdm
 import Kraken_Request as kr
 
@@ -58,68 +59,22 @@ while run:
 
     #if user input is get trades history
     if action == "get trades history":
-        #request trades history
-        resp = kr('/0/private/TradesHistory', {
-            "nonce": str(int(1000*time.time())),
-            # "type": <string> (default):"all" "any position" "closed position" "closing position" "no position"
-            "trades": True
-            # "start": <integer> Starting unix timestamp or trade tx ID of results (exclusive)
-            # "end": <integer> Ending unix timestamp or trade tx ID of results (inclusive)
-            # "ofs": <integer> Result offset for pagination
-        }, api_key, api_secret)
-        #print response
-        if not resp.json()['error']:
-            print(resp.json())
-        else:
-            print(f'Error: {resp.json()["error"]}')
+        accountfunctions.trades_history(api_key, api_secret)
 
 
     #if user input is get open orders
     if action == "get open orders":
-        #request open orders
-        resp = kr('/0/private/OpenOrders', {
-            "nonce": str(int(1000*time.time())),
-            "trades": True,
-            # "userref": <integer> Restrict results to given user reference id
-        }, api_key, api_secret)
-        #print response
-        if not resp.json()['error']:
-            print(resp.json())
-        else:
-            print(f'Error: {resp.json()["error"]}')
+        accountfunctions.open_orders(api_key, api_secret)
 
 
     #if user input is cancel order
     if action == "cancel order":
-        #input transaction id
-        txid = input("Enter transaction id: ")
-        #request cancel order
-        resp = kr('/0/private/CancelOrder', {
-            "nonce": str(int(1000*time.time())),
-            "txid": txid
-        }, api_key, api_secret)
-        #print response
-        if not resp.json()['error']:
-            print(f'Order {txid} canceled...')
-        else:
-            print(f'Error: {resp.json()["error"]}')
+        accountfunctions.cancel_order(api_key, api_secret)
 
 
     #if user input is get order book
     if action == "get order book":
-        #input asset and count
-        pair = input("Enter the asset pair you want to see: ")
-        count = input(f'Enter the amount of asks/bids you want to see for {pair} (1-500): ')
-        # request order book
-        resp = requests.get('https://api.kraken.com/0/public/Depth', {
-            "pair": pair,
-            "count": count
-        })
-        #print response
-        if not resp.json()['error']:
-            print(resp.json())
-        else:
-            print(f'Error: {resp.json()["error"]}')    
+        accountfunctions.get_order_book()
 
 
     #if user input is change account, they'll be able to input a new
