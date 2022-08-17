@@ -6,10 +6,12 @@ import hashlib
 import hmac
 import base64
 from tqdm import tqdm
+import order 
 import Kraken_Request as kr
 
 
-#npn
+
+
 # print string to comand line welcome to your Python Trading Bot
 print("Welcome to your Python Trading Bot")
 
@@ -29,6 +31,7 @@ while run:
     # make sure checks for valid input are in lower case
     print("Choose what action you want to take\n")
     print("Get Account Balance\n")
+    print("Add Order\n")
     print("Get Account History\n")
     print("Get Open Orders\n")
     print("Cancel Order\n")
@@ -51,14 +54,21 @@ while run:
         print("Account Balance is:")
         # sleep for 1 second to allow user to read output
         time.sleep(1)
-    
-    # if user input is change account, they'll be able to input a new
-    # API Key and API Secret.
+
+
+    #if user input is change account, they'll be able to input a new
+    #API Key and API Secret.
     if action == "change account":
         api_key = input("Please enter your API Key: ")
         api_secret = input("Please enter your API Secret: ")
 
-    # if user action is exit then exit loop
+
+    #if user input is add order, they'll be able to add an order
+    if action == "add order":
+        order.add_order()
+
+
+    #if user action is exit then exit loop
     if action == "exit":
         run = False
         # if user action is not listed then print error message
