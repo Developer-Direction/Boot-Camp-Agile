@@ -35,7 +35,7 @@ while run:
     print("Fund Account\n")
     print("Change Account\n")
     print("Exit\n")
-
+    
     # get user input for action
     action = input("Enter action: ")
 
@@ -50,7 +50,7 @@ while run:
         print("Account Balance is:")
         # sleep for 1 second to allow user to read output
         time.sleep(1)
-
+    
     # if user input is change account, they'll be able to input a new
     # API Key and API Secret.
     if action == "change account":
@@ -61,11 +61,11 @@ while run:
     if action == "exit":
         run = False
         # if user action is not listed then print error message
-
+    
     # consider rewriting to check from a listy instead of if else and a ton of conditionals
     elif action != "get account balance" and action != "get account history" and action != "get open orders" and action != "cancel order" and action != "fund account" and action != "change account":
         print("Error: Action not found")
-
+    
     # print out equals line to denote comand complete
     print("\n"+"=" * 100+"\n")
     # sleep for 1 second to allow user to read output
