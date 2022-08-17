@@ -6,6 +6,8 @@ import hashlib
 import hmac
 import base64
 from tqdm.auto import tqdm
+import Kraken_Request as kr
+
 
 
 # print string to comand line welcome to your Python Trading Bot
