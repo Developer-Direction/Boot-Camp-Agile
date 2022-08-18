@@ -1,10 +1,10 @@
 import time
 import os 
 import requests
-# from dotenv import load_dotenv
+from dotenv import load_dotenv
 import Kraken_Request 
 
-# load_dotenv()
+load_dotenv()
 
 api_url = "https://api.kraken.com"
 
