@@ -2,6 +2,12 @@ import urllib.parse
 import hashlib
 import hmac
 import base64
+import time
+
+
+kraken_data = {
+  "nonce": str(int(1000*time.time()))
+}
 
 def get_kraken_signature(urlpath, data, secret):
 
@@ -15,3 +21,7 @@ def get_kraken_signature(urlpath, data, secret):
 
 def kraken_request(url_path,data, api_key,api_sec):
     headers = {"API-Key": api_key, "API-Sign": get_kraken_signature (url_path, data, api_sec)}
+
+
+def get_kraken_data():
+    return kraken_data
