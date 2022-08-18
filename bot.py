@@ -5,8 +5,8 @@ import urllib.parse
 import hashlib
 import hmac
 import base64
+from tqdm import tqdm
 import order 
-from tqdm.auto import tqdm
 import Kraken_Request as kr
 
 
@@ -37,8 +37,9 @@ while run:
     print("Cancel Order\n")
     print("Fund Account\n")
     print("Change Account\n")
+    print("Get System Status\n")
     print("Exit\n")
-
+    
     # get user input for action
     action = input("Enter action: ")
 
@@ -71,11 +72,20 @@ while run:
     if action == "exit":
         run = False
         # if user action is not listed then print error message
-
+    
+    if action == "get system status":
+        # get system status
+        # get_system_status()
+        resp = requests.get('https://api.kraken.com/0/public/SystemStatus')
+        print("System Status is:")
+        print(resp.json())
+        # sleep for 1 second to allow user to read output
+        time.sleep(1)
+    
     # consider rewriting to check from a listy instead of if else and a ton of conditionals
     elif action != "get account balance" and action != "get account history" and action != "get open orders" and action != "cancel order" and action != "fund account" and action != "change account":
         print("Error: Action not found")
-
+    
     # print out equals line to denote comand complete
     print("\n"+"=" * 100+"\n")
     # sleep for 1 second to allow user to read output
