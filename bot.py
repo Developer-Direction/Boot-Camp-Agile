@@ -5,8 +5,9 @@ import urllib.parse
 import hashlib
 import hmac
 import base64
-from tqdm import tqdm
 import order 
+import accountfunctions
+from tqdm.auto import tqdm
 import Kraken_Request as kr
 
 
@@ -31,7 +32,12 @@ while run:
     # make sure checks for valid input are in lower case
     print("Choose what action you want to take\n")
     print("Get Account Balance\n")
+
+    print("Get Trades History\n")
     print("Add Order\n")
+    print("Get Open Orders\n")
+    print("Cancel Order\n")
+    print("Get Order Book\n")
     print("Get Account History\n")
     print("Get Open Orders\n")
     print("Cancel Order\n")
@@ -39,7 +45,7 @@ while run:
     print("Change Account\n")
     print("Get System Status\n")
     print("Exit\n")
-    
+
     # get user input for action
     action = input("Enter action: ")
 
@@ -55,6 +61,26 @@ while run:
         # sleep for 1 second to allow user to read output
         time.sleep(1)
 
+
+
+    #if user input is get trades history
+    if action == "get trades history":
+        accountfunctions.trades_history(api_key, api_secret)
+
+
+    #if user input is get open orders
+    if action == "get open orders":
+        accountfunctions.open_orders(api_key, api_secret)
+
+
+    #if user input is cancel order
+    if action == "cancel order":
+        accountfunctions.cancel_order(api_key, api_secret)
+
+
+    #if user input is get order book
+    if action == "get order book":
+        accountfunctions.get_order_book()
 
     #if user input is change account, they'll be able to input a new
     #API Key and API Secret.
@@ -72,6 +98,11 @@ while run:
     if action == "exit":
         run = False
         # if user action is not listed then print error message
+
+    # consider rewriting to check from a listy instead of if else and a ton of conditionals
+    elif action != "get account balance" and action != "get account history" and action != "get open orders" and action != "cancel order" and action != "fund account" and action != "change account":
+        print("Error: Action not found")
+
     
     if action == "get system status":
         # get system status
@@ -86,6 +117,7 @@ while run:
     elif action != "get account balance" and action != "get account history" and action != "get open orders" and action != "cancel order" and action != "fund account" and action != "change account":
         print("Error: Action not found")
     
+
     # print out equals line to denote comand complete
     print("\n"+"=" * 100+"\n")
     # sleep for 1 second to allow user to read output
