@@ -32,6 +32,7 @@ while run:
     # make sure checks for valid input are in lower case
     print("Choose what action you want to take\n")
     print("Get Account Balance\n")
+
     print("Get Trades History\n")
     print("Add Order\n")
     print("Get Open Orders\n")
@@ -42,6 +43,7 @@ while run:
     print("Cancel Order\n")
     print("Fund Account\n")
     print("Change Account\n")
+    print("Get System Status\n")
     print("Exit\n")
 
     # get user input for action
@@ -58,6 +60,7 @@ while run:
         print("Account Balance is:")
         # sleep for 1 second to allow user to read output
         time.sleep(1)
+
 
 
     #if user input is get trades history
@@ -79,7 +82,6 @@ while run:
     if action == "get order book":
         accountfunctions.get_order_book()
 
-
     #if user input is change account, they'll be able to input a new
     #API Key and API Secret.
     if action == "change account":
@@ -100,6 +102,21 @@ while run:
     # consider rewriting to check from a listy instead of if else and a ton of conditionals
     elif action != "get account balance" and action != "get account history" and action != "get open orders" and action != "cancel order" and action != "fund account" and action != "change account":
         print("Error: Action not found")
+
+    
+    if action == "get system status":
+        # get system status
+        # get_system_status()
+        resp = requests.get('https://api.kraken.com/0/public/SystemStatus')
+        print("System Status is:")
+        print(resp.json())
+        # sleep for 1 second to allow user to read output
+        time.sleep(1)
+    
+    # consider rewriting to check from a listy instead of if else and a ton of conditionals
+    elif action != "get account balance" and action != "get account history" and action != "get open orders" and action != "cancel order" and action != "fund account" and action != "change account":
+        print("Error: Action not found")
+    
 
     # print out equals line to denote comand complete
     print("\n"+"=" * 100+"\n")
