@@ -41,6 +41,7 @@ while run:
     print("Get Account History\n")
     print("Get Open Orders\n")
     print("Cancel Order\n")
+    print("Get asset info\n")
     print("Fund Account\n")
     print("Change Account\n")
     print("Get System Status\n")
@@ -77,6 +78,25 @@ while run:
     if action == "cancel order":
         accountfunctions.cancel_order(api_key, api_secret)
 
+    #if user input is get asset info
+    # they will be able to search for all the assets or a specific pair
+    if action == "get asset info":
+        time.sleep(1)
+        answer = input("You can either get all pairings using 'all', a specific pairing by name 'BTC/USD' or exit using 'cancel'\n")
+        if answer == "all":
+            ##get all pairings and display them
+            resp = requests.get('https://api.kraken.com/0/public/Assets')
+            print(resp.json())
+            
+        elif answer == "cancel":
+            #get out of the if loop
+            continue
+        else: #get the ticker related to the input
+            url_link = "https://api.kraken.com/0/public/Ticker?pair=" #partial URL to complete with the appropriate ticker
+            complete_url = url_link + answer
+            resp = requests.get(complete_url)
+            print(resp.json())
+        time.sleep(1)
 
     #if user input is get order book
     if action == "get order book":
