@@ -9,6 +9,7 @@ import order
 import accountfunctions
 from tqdm.auto import tqdm
 import Kraken_Request as kr
+import os
 
 
 
@@ -45,6 +46,7 @@ while run:
     print("Fund Account\n")
     print("Change Account\n")
     print("Get System Status\n")
+    print("get recent withdrawls")
     print("Exit\n")
 
     # get user input for action
@@ -62,7 +64,10 @@ while run:
         # sleep for 1 second to allow user to read output
         time.sleep(1)
 
-
+    #if user input is get status of recent withdrawals
+    if action == "get recent withdrawls":
+        accountfunctions.get_recent_withdrawls(api_key, api_secret)
+        time.sleep(1)
 
     #if user input is get trades history
     if action == "get trades history":

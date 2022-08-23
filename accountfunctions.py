@@ -82,4 +82,16 @@ def get_order_book():
     if not resp.json()['error']:
         print(resp.json())
     else:
-        print(f'Error: {resp.json()["error"]}')  
+        print(f'Error: {resp.json()["error"]}') 
+
+def get_recent_order():
+    #take in input for asset
+    asset = input("Enter the asset you want to see recent orders for: ")
+    resp = kraken_request('/0/private/WithdrawStatus', {
+    "nonce": str(int(1000*time.time())),
+    "asset": asset
+    }, api_key, api_sec)
+    if not resp.json()['error']:
+        print(resp.json())
+    else:
+        print(f'Error: {resp.json()["error"]}')
