@@ -46,7 +46,11 @@ while run:
     print("Fund Account\n")
     print("Change Account\n")
     print("Get System Status\n")
-    print("get recent withdrawls")
+    print("Get Recent withdrawls\n")
+    print("Get Withdrawal Info\n")
+    print("Withdraw Funds\n")
+    print("Request Wallet Transfer\n")
+    print("Request Withdrawal Cancellation\n")
     print("Exit\n")
 
     # get user input for action
@@ -65,8 +69,25 @@ while run:
         time.sleep(1)
 
     #if user input is get status of recent withdrawals
-    if action == "get recent withdrawls":
-        accountfunctions.get_recent_withdrawls(api_key, api_secret)
+    if action == "get recent withdrawals":
+        accountfunctions.get_recent_withdrawals(api_key, api_secret)
+        time.sleep(1)
+
+    #if user input is get withdrawal info
+    if action == "get withdrawl info":
+        accountfunctions.get_withdrawal_info(api_key, api_secret)
+        time.sleep(1)
+    #if user action is withdraw funds
+    if action == "withdraw funds":
+        accountfunctions.withdraw_funds(api_key, api_secret)
+        time.sleep(1)
+    #if user action is request wallet transfer
+    if action == "request wallet transfer":
+        accountfunctions.request_wallet_transfer(api_key, api_secret)
+        time.sleep(1)
+    #if user action is request withdrawal cancellation
+    if action == "request withdrawal cancellation":
+        accountfunctions.request_withdrawal_cancellation(api_key, api_secret)
         time.sleep(1)
 
     #if user input is get trades history
