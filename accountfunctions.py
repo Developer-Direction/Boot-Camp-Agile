@@ -82,4 +82,67 @@ def get_order_book():
     if not resp.json()['error']:
         print(resp.json())
     else:
-        print(f'Error: {resp.json()["error"]}')  
+        print(f'Error: {resp.json()["error"]}') 
+
+def get_recent_withdrawals():
+    #take in input for asset
+    asset = input("Enter the asset you want to see recent orders for: ")
+    resp = kraken_request('/0/private/WithdrawStatus', {
+    "nonce": str(int(1000*time.time())),
+    "asset": asset
+    }, api_key, api_sec)
+    if not resp.json()['error']:
+        print(resp.json())
+    else:
+        print(f'Error: {resp.json()["error"]}')
+def get_withdrawal_info():
+    #take in input for asset
+    asset = input("Enter the asset you want to see recent orders for: ")
+    resp = kraken_request('/0/private/WithdrawStatus', {
+    "nonce": str(int(1000*time.time())),
+    "asset": asset
+    }, api_key, api_sec)
+    if not resp.json()['error']:
+        print(resp.json())
+    else:
+        print(f'Error: {resp.json()["error"]}')
+def withdraw_funds():
+    #take in input for asset
+    asset = input("Enter the asset you want to withdraw: ")
+    amount = input("Enter the amount you want to withdraw: ")
+    resp = kraken_request('/0/private/Withdraw', {
+    "nonce": str(int(1000*time.time())),
+    "asset": asset,
+    "amount": amount,
+    }, api_key, api_sec)
+    if not resp.json()['error']:
+        print(resp.json())
+    else:
+        print(f'Error: {resp.json()["error"]}')
+def request_withdrawal_cancelation():
+    #take in input for asset
+    asset = input("Enter the asset you want for the withdrawal you want to cancel: ")
+    refid = input("Enter the reference id of the withdrawal you want to cancel: ")
+    resp = kraken_request('/0/private/WithdrawCancel', {
+    "nonce": str(int(1000*time.time())),
+    "asset": asset,
+    "refid": refid
+    }, api_key, api_sec)
+    if not resp.json()['error']:
+        print(resp.json())
+    else:
+        print(f'Error: {resp.json()["error"]}')
+def request_wallet_transfer():
+    #take in asset and ammount
+    asset = input("Enter the asset you want to transfer: ")
+    amount = input("Enter the amount you want to transfer: ")
+    resp = kraken_request('/0/private/WalletTransfer', {
+    "nonce": str(int(1000*time.time())),
+    "asset": asset,
+    "amount": amount
+    }, api_key, api_sec)
+    if not resp.json()['error']:
+        print(resp.json())
+    else:
+        print(f'Error: {resp.json()["error"]}')
+        
