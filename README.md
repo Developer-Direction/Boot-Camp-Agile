@@ -40,19 +40,19 @@ TODO: add user story blockquotes - josh
 <blockquote class="trello-card"><a href="https:&#x2F;&#x2F;trello.com&#x2F;c&#x2F;dQOFxLp7&#x2F;7-implement-user-add-order-functionality">Implement user Add Order functionality</a>
 
 
-## Sprint 1 Planning:
+## Sprint 2 Planning:
 
-<img width="1957" alt="image" src="https://user-images.githubusercontent.com/109127536/184504424-5bb84435-f876-4e0d-ab63-fc77fb2d11bc.png">
+<img width="1279" alt="image" src="https://user-images.githubusercontent.com/109127536/186553854-ff694eb8-535c-4430-a11f-8f1b6034225a.png">
 
-# Sprint 1:
+# Sprint 2:
 
-# Sprint 1:
+# Sprint 3: 
 
-# Sprint 2: 
-
-# Sprint 3:
-
-# Retro:
+# Sprint 2 Retro:
+  
+  - What worked well?
+  - What didn't work so well?
+  - What could have been improved?
 
 ### Resources:
 
@@ -62,9 +62,3 @@ Kraken REST API Documentation: https://docs.kraken.com/rest/
 
 Kraken API Testing Environment: https://support.kraken.com/hc/en-us/articles/360024809011-API-Testing-Environment
 
-### Glossary:
-
-Agile -
-SCRUM -
-Sprints - 
-User Stories - 
