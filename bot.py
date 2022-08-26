@@ -60,6 +60,58 @@ while run:
     # convert action to lower case
     action = action.lower()
 
+    # Fund Menu
+    def fund_menu():
+        print("[1] Fund Method")
+        print("[2] Funding Address")
+        print("exit")
+
+        fund_menu()
+
+        fundOption = int(input("Enter your method: "))
+
+        # Options for fund mennu
+        while fundOption != 0:
+            if fundOption == 1:
+                print("Method has been called.")
+    
+            if fundOption != 0:
+                print("Enter your address: ")
+    
+            else: 
+                print("Invalid address")
+
+        print()
+        fund_menu()
+
+        fundOption = int(input("Enter your address: "))
+
+    
+    # Fund account
+    action = input("Fund Account: ")
+
+    #if user input is fund account
+    if action == "Fund Account":
+        fund_Account()
+
+    # function for funding account address and funding method
+    def fund_Account():
+        data = '/0/private/DepositAddresses', {
+        "nonce": str(int(1000*time.time())),
+        "asset": "XBT",
+        "method": "Bitcoin",
+        "new": True
+        }, api_key, api_secret
+
+        data = '/0/private/DepositMethods', {
+        "nonce": str(int(1000*time.time())),
+        "asset": "XBT"
+        }, api_key, api_sec
+
+        # kraken request
+        print(kraken_request())
+    
+
     # if user input is get account balance
     if action == "get account balance":
         # get account balance
