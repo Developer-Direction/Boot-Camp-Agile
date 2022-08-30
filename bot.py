@@ -86,9 +86,6 @@ while run:
 
         fundOption = int(input("Enter your address: "))
 
-    
-    # Fund account
-    action = input("Fund Account: ")
 
     #if user input is fund account
     if action == "Fund Account":
@@ -164,7 +161,7 @@ while run:
         if answer == "all":
             ##get all pairings and display them
             resp = requests.get('https://api.kraken.com/0/public/Assets')
-            print(resp.json())
+            print(str(resp.json()['result']))
             
         elif answer == "cancel":
             #get out of the if loop
@@ -173,7 +170,12 @@ while run:
             url_link = "https://api.kraken.com/0/public/Ticker?pair=" #partial URL to complete with the appropriate ticker
             complete_url = url_link + answer
             resp = requests.get(complete_url)
-            print(resp.json())
+            answer = resp.json()
+            ##Differenciate between error and Price Action
+            if not answer['error']:
+                print(resp.json()['result'])
+            else:
+                print(f'Error: {answer["error"]}')
         time.sleep(1)
 
     #if user input is get order book
