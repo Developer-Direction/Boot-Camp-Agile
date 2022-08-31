@@ -59,7 +59,6 @@ while run:
     # note to developers make sure checks for valid input are in lower case
     # convert action to lower case
     action = action.lower()
-
     # Fund Menu
     def fund_menu():
         print("[1] Fund Method")
@@ -86,9 +85,6 @@ while run:
 
         fundOption = int(input("Enter your address: "))
 
-    
-    # Fund account
-    action = input("Fund Account: ")
 
     #if user input is fund account
     if action == "Fund Account":
@@ -163,8 +159,12 @@ while run:
         answer = input("You can either get all pairings using 'all', a specific pairing by name 'BTC/USD' or exit using 'cancel'\n")
         if answer == "all":
             ##get all pairings and display them
+            asset_list = []
             resp = requests.get('https://api.kraken.com/0/public/Assets')
-            print(resp.json())
+            asset_list = list(resp.json()['result'].keys())
+            print(asset_list)
+
+            
             
         elif answer == "cancel":
             #get out of the if loop
@@ -173,9 +173,14 @@ while run:
             url_link = "https://api.kraken.com/0/public/Ticker?pair=" #partial URL to complete with the appropriate ticker
             complete_url = url_link + answer
             resp = requests.get(complete_url)
-            print(resp.json())
+            answer = resp.json()
+            ##Differenciate between error and Price Action
+            if not answer['error']:
+                print(resp.json()['result'])
+            else:
+                print(f'Error: {answer["error"]}')
         time.sleep(1)
-
+    
     #if user input is get order book
     if action == "get order book":
         accountfunctions.get_order_book()
