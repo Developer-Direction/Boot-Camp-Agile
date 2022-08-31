@@ -97,6 +97,7 @@ while run:
     print("17. Exit\n")
 
     # get user input for action
+
     action = input("Enter the number of your desired option: ")
 
     match action:
@@ -209,7 +210,7 @@ while run:
             # sleep for 1 second to allow user to read output
             time.sleep(1)
             command_end()
-    
+
         case "17":
             #if user action is exit then exit loop
             run = False
