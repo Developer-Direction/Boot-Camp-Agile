@@ -15,6 +15,8 @@ For your trophy case you will be able to add: **A fork of this repository** (if 
 
 ### User Stories:
 
+#### I am even smaller
+
 TODO: add user story blockquotes - josh
 
 <blockquote class="trello-card"><a href="https:&#x2F;&#x2F;trello.com&#x2F;c&#x2F;iNetA3ok&#x2F;1-build-kraken-trading-application">Build Kraken Trading Application.</a></blockquote>
