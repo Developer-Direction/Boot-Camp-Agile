@@ -6,11 +6,9 @@ import hashlib
 import hmac
 import base64
 
-
-
-
-
+#Regular
 api_url = 'https://api.kraken.com'
+
 
 def get_kraken_signature(urlpath, data, secret):
     postdata = urllib.parse.urlencode(data)
@@ -84,7 +82,7 @@ def get_order_book():
     else:
         print(f'Error: {resp.json()["error"]}') 
 
-def get_recent_withdrawals():
+def get_recent_withdrawals( api_key, api_sec):
     #take in input for asset
     asset = input("Enter the asset you want to see recent orders for: ")
     resp = kraken_request('/0/private/WithdrawStatus', {
@@ -95,7 +93,8 @@ def get_recent_withdrawals():
         print(resp.json())
     else:
         print(f'Error: {resp.json()["error"]}')
-def get_withdrawal_info():
+
+def get_withdrawal_info(api_key, api_sec):
     #take in input for asset
     asset = input("Enter the asset you want to see recent orders for: ")
     resp = kraken_request('/0/private/WithdrawStatus', {
@@ -106,7 +105,8 @@ def get_withdrawal_info():
         print(resp.json())
     else:
         print(f'Error: {resp.json()["error"]}')
-def withdraw_funds():
+        
+def withdraw_funds(api_key, api_sec):
     #take in input for asset
     asset = input("Enter the asset you want to withdraw: ")
     amount = input("Enter the amount you want to withdraw: ")
@@ -119,7 +119,8 @@ def withdraw_funds():
         print(resp.json())
     else:
         print(f'Error: {resp.json()["error"]}')
-def request_withdrawal_cancelation():
+
+def request_withdrawal_cancelation( api_key, api_sec):
     #take in input for asset
     asset = input("Enter the asset you want for the withdrawal you want to cancel: ")
     refid = input("Enter the reference id of the withdrawal you want to cancel: ")
@@ -128,11 +129,13 @@ def request_withdrawal_cancelation():
     "asset": asset,
     "refid": refid
     }, api_key, api_sec)
+
     if not resp.json()['error']:
         print(resp.json())
     else:
         print(f'Error: {resp.json()["error"]}')
-def request_wallet_transfer():
+
+def request_wallet_transfer( api_key, api_sec):
     #take in asset and ammount
     asset = input("Enter the asset you want to transfer: ")
     amount = input("Enter the amount you want to transfer: ")
