@@ -5,7 +5,7 @@ import urllib.parse
 import hashlib
 import hmac
 import base64
-import order 
+import addorder 
 import accountfunctions
 from tqdm.auto import tqdm
 import Kraken_Request as kr
@@ -32,7 +32,10 @@ def fund_Account():
     "asset": "XBT"
     }, api_key, api_secret
     # kraken request
-    print(kraken_request())
+    #print(Kraken_Request()) 
+    #make a call to Kraken_Request passing above info
+    #grab resulkt
+    #print result
 
 # Fund Menu
 def fund_menu():
@@ -150,7 +153,7 @@ while run:
             command_end()
 
         case "7":
-            order.add_order()
+            addorder.add_order(api_key, api_secret)
             command_end()
         
         case "8":
