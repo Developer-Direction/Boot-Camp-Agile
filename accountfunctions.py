@@ -69,6 +69,26 @@ def cancel_order(api_key, api_sec):
     else:
         print(f'Error: {resp.json()["error"]}')
 
+# Get account balance
+def get_account_balance(api_key, api_secret):
+    resp = kraken_request('/0/private/Balance', {
+        "nonce": str(int(1000*time.time()))
+    }, api_key, api_secret)
+
+    print(resp.json())
+
+#Get Status of Recent Deposit
+def get_recent_deposit(api_key, api_sec):
+    resp = kraken_request('/0/private/DepositStatus', {
+        "nonce": str(int(1000*time.time())),
+        "asset": "XBT"
+    }, api_key, api_sec)
+
+    print(resp.json())
+
+
+
+
 
 def get_order_book():
     #input asset and count

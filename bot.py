@@ -87,14 +87,15 @@ while run:
     print("7. Add Order")
     print("8. Cancel Order")
     print("9. Fund Account")
-    print("10. Withdraw Funds")
-    print("11. Request Withdrawal Cancellation")
-    print("12. Get Recent withdrawals")
-    print("13. Get Withdrawal Info")
-    print("14. Request Wallet Transfer")
-    print("15. Change Account")
-    print("16. Get System Status")
-    print("17. Exit\n")
+    print("10. Get Status of Recent Deposit")
+    print("11. Withdraw Funds")
+    print("12. Request Withdrawal Cancellation")
+    print("13. Get Recent withdrawals")
+    print("14. Get Withdrawal Info")
+    print("15. Request Wallet Transfer")
+    print("16. Change Account")
+    print("17. Get System Status")
+    print("18. Exit\n")
 
     # get user input for action
 
@@ -134,8 +135,8 @@ while run:
 
         case "4":
             # get account balance
-            # get_account_balance()
             print("Account Balance is:")
+            accountfunctions.get_account_balance(api_key, api_secret)
             # sleep for 1 second to allow user to read output
             time.sleep(1)
             command_end()
@@ -162,38 +163,43 @@ while run:
             #if user input is fund account
             fund_Account()
             command_end()
-        
+
         case "10":
+            #if user input is get recent deposit status
+            accountfunctions.get_recent_deposit(api_key, api_secret)
+            command_end()
+        
+        case "11":
             #if user action is withdraw funds
             accountfunctions.withdraw_funds(api_key, api_secret)
             time.sleep(1)
             command_end()
         
-        case "11":
+        case "12":
             #if user action is request withdrawal cancellation
             accountfunctions.request_withdrawal_cancellation(api_key, api_secret)
             time.sleep(1)
             command_end()
             
-        case "12":
+        case "13":
             #if user input is get status of recent withdrawals
             accountfunctions.get_recent_withdrawals(api_key, api_secret)
             time.sleep(1)
             command_end()
         
-        case "13":
+        case "14":
             #if user input is get withdrawal info
             accountfunctions.get_withdrawal_info(api_key, api_secret)
             time.sleep(1)
             command_end()
         
-        case "14":
+        case "15":
             #if user action is request wallet transfer
             accountfunctions.request_wallet_transfer(api_key, api_secret)
             time.sleep(1)
             command_end()
         
-        case "15":
+        case "16":
             #if user input is change account, they'll be able to input a new
             #API Key and API Secret.
             api_key = input("Please enter your API Key: ")
@@ -201,7 +207,7 @@ while run:
             print("\nYou have changed accounts.")
             command_end()
         
-        case "16":
+        case "17":
             # get system status
             # get_system_status()
             resp = requests.get('https://api.kraken.com/0/public/SystemStatus')
@@ -211,7 +217,7 @@ while run:
             time.sleep(1)
             command_end()
 
-        case "17":
+        case "18":
             #if user action is exit then exit loop
             run = False
             command_end()
