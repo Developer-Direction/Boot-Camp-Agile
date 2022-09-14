@@ -148,4 +148,25 @@ def request_wallet_transfer( api_key, api_sec):
         print(resp.json())
     else:
         print(f'Error: {resp.json()["error"]}')
-        
+
+
+# def get_deposit_methods(api_key, api_sec):
+#     resp = kraken_request('/0/private/DepositMethods', {
+#          "nonce": str(int(1000*time.time())),
+#          "asset": "XBT"},
+#          api_key, api_sec)    
+#           print(resp.json())
+          
+def get_deposit_address(api_key, api_sec):
+    data = '/0/private/DepositAddresses', {
+    "nonce": str(int(1000*time.time())),
+    "asset": "XBT",
+    "method": "Bitcoin",
+    "new": True
+    }
+
+    resp = kraken_request(data, api_key, api_sec)
+    if not resp.json()['error']:
+        print(resp.json())
+    else:
+        print(f'Error: {resp.json()["error"]}')

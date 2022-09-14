@@ -20,41 +20,42 @@ api_key = input("Please enter your API Key: ")
 api_secret = input("Please enter your API Secret: ")
 
 # function for funding account address and funding method
-def fund_Account():
-    data = '/0/private/DepositAddresses', {
-    "nonce": str(int(1000*time.time())),
-    "asset": "XBT",
-    "method": "Bitcoin",
-    "new": True
-    }, api_key, api_secret
-    data = '/0/private/DepositMethods', {
-    "nonce": str(int(1000*time.time())),
-    "asset": "XBT"
-    }, api_key, api_secret
-    # kraken request
-    #print(Kraken_Request()) 
-    #make a call to Kraken_Request passing above info
-    #grab resulkt
-    #print result
+# def fund_Account():
+#     data = '/0/private/DepositAddresses', {
+#     "nonce": str(int(1000*time.time())),
+#     "asset": "XBT",
+#     "method": "Bitcoin",
+#     "new": True
+#     }, api_key, api_secret
+#     data = '/0/private/DepositMethods', {
+#     "nonce": str(int(1000*time.time())),
+#     "asset": "XBT"
+#     }, api_key, api_secret
+#     # kraken request
+#     #print(Kraken_Request()) 
+#     #make a call to Kraken_Request passing above info
+#     #grab resulkt
+#     #print result
+#     kr.kraken_request()
 
 # Fund Menu
-def fund_menu():
-    print("1. Fund Method")
-    print("2. Funding Address")
-    print("exit")
-    fund_menu()
-    fundOption = int(input("Enter your method: "))
-    # Options for fund mennu
-    while fundOption != 0:
-        if fundOption == 1:
-            print("Method has been called.")
-        if fundOption != 0:
-            print("Enter your address: ")
-        else: 
-            print("Invalid address")
-    print()
-    fund_menu()
-    fundOption = int(input("Enter your address: "))
+# def fund_menu():
+#     print("1. Fund Method")
+#     print("2. Funding Address")
+#     print("exit")
+#     fund_menu()
+#     fundOption = int(input("Enter your method: "))
+#     # Options for fund mennu
+#     while fundOption != 0:
+#         if fundOption == 1:
+#             print("Method has been called.")
+#         if fundOption != 0:
+#             print("Enter your address: ")
+#         else: 
+#             print("Invalid address")
+#     print()
+#     fund_menu()
+#     fundOption = int(input("Enter your address: "))
 
 def command_end():    
         # print out equals line to denote comand complete
