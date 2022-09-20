@@ -46,13 +46,10 @@ TODO: add user story blockquotes - josh
 
 # Sprint 2:
 
-# Sprint 3: 
+# Sprint 3 Planning: 
 
-# Sprint 2 Retro:
-  
-  - What worked well?
-  - What didn't work so well?
-  - What could have been improved?
+![image](https://user-images.githubusercontent.com/109127536/191345413-7213a1bf-4288-41d0-bdd8-7fcac959083d.png)
+
 
 ### Resources:
 
