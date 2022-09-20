@@ -1,7 +1,6 @@
 # Boot-Camp-Agile
 Boot Camp Agile course instructions, notes & documents. 
 
-# Table of contents:
 
 ## Goal of the course: 
 To learn & comprehend **Agile Software Development Methodology** via the simulation of a team & work envoirment. Coupled with basic software development & programming principles for beginners. 
@@ -58,4 +57,15 @@ Trello board link: https://trello.com/invite/bootcampagile/01751e372503d7d21216e
 Kraken REST API Documentation: https://docs.kraken.com/rest/
 
 Kraken API Testing Environment: https://support.kraken.com/hc/en-us/articles/360024809011-API-Testing-Environment
+
+
+  
+  
+#Kraken Python Bot:
+  
+  
+## How To Run:
+  
+### Install dependencies:
+  
 
