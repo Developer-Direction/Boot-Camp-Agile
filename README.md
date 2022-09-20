@@ -61,7 +61,7 @@ Kraken API Testing Environment: https://support.kraken.com/hc/en-us/articles/360
 
   
   
-#Kraken Python Bot:
+# Kraken Python Bot:
   
   
 ## How To Run:
